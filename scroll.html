@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce | 2 Product Slider</title>
+  <script>
+    const slider = document.getElementById("slider");   //hole cont
+    const leftBtn = document.getElementById("left");    //left  button
+    const rightBtn = document.getElementById("right");  //right button
+
+    
+      let scrollAmount = 0;
+      const itemWidth = 280 * 1; // move 2 products per click
+
+    rightBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: itemWidth, behavior: "smooth" });
+    });
+
+    leftBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: -itemWidth, behavior: "smooth" });
+    });
+
+  </script>
+</body>
+</html>

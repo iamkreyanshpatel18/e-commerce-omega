@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adidas Login</title>
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  header {
+    background-color: #000;
+    padding: 1rem 2rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .login-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #333;
+  }
+
+  .signup-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 16px;
+  }
+
+  .signup-link a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.UNRfOtGFBhUPTfmAqtHhdAAAAA?cb=ucfimg2ucfimg=1&w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3" width="60px" height="100px" alt="Adidas Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Store Finder</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+     
+  <main class="login-container">
+    <form class="login-form" id="loginForm">
+      <h2>Log In to Your Account</h2>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required />
+      </div>
+      <button type="submit" class="submit-btn">Log In</button>
+      <p class="signup-link">
+        Don't have an account? <a href="./Register.html">Sign up here</a>
+      </p>
+    </form>
+  </main>
+
+  <script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  // ✅ get data from localStorage
+  const savedUser = JSON.parse(localStorage.getItem("userData"));
+
+  if (!savedUser) {
+    alert("No account found! Please register first.");
+    return;
+  }
+
+  // ✅ check if credentials match
+  if (email === savedUser.email && password === savedUser.password) {
+    alert("Login successful ✅");
+    window.location.href = "demo1.html"; // redirect to your home page
+  } else {
+    alert("❌ Invalid Email or Password");
+  }
+});
+</script>
+
+</body>
+</html>

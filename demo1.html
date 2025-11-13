@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>omega Store</title>
+  <style>
+    
+
+
+    .join-banner {
+      background-color: #4b8a76;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .join-banner h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .signup-btn {
+      background: white;
+      color: black;
+      border: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: 0.3s;
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    .signup-btn:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 60px 80px 30px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+
+    .social-icons img {
+      filter: invert(1);
+      cursor: pointer;
+      transition: 0.3s;
+      width: 40px;
+      max-width: 85%;
+      /* margin: 0 10px; */
+      color: rgb(211, 25, 25);
+      background-color: brown;
+    }
+
+    .social-icons img:hover {
+      opacity: 0.7;
+      background-color: red;
+      color: red;
+    }
+
+    .social-icons img:active {
+      display: none;
+      position: relative;
+      top: 2px;
+      gap: 15px;
+      margin-top: 10px;
+      width: 24px;
+      max-width: 100%;
+      margin: 0 5px;
+    }
+
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-links li {
+      color: #ccc;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .footer-links li:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      footer {
+        padding: 50px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color:white;
+        padding: 20px;
+        /* bottom: 10px; */
+
+      }
+
+      .join-banner h2 {
+        font-size: 1.3rem;
+      }
+
+      .signup-btn {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .footer-center {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer {
+        padding: 40px 20px;
+        align-items: center;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="demo1.css">
+</head>
+<body>
+  <div class="main">
+    <div class="img">
+      <img src="" alt="" srcset="">
+    </div><br><br>
+    
+    <div class="nav">
+      <ul class="ul">
+        <div class="logo"></div>
+        <li>HOME</li>
+        <li><a href="men.html" style="color: black; text-decoration: none;">MEN</a></li>
+        <li><a href="women.html" style="color: black; text-decoration: none;">WOMEN</a></li>
+        <li><a href="kids.html" style="color: black; text-decoration: none;">KIDS</a></li>
+        <li>CART</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mainimg">
+    <div class="box1">
+      <div class="box" id="b1"></div>
+      <div class="box" id="b2"></div>
+      <div class="box" id="b3"></div>
+      <div class="box" id="b4"></div>
+    </div>
+  </div>
+
+  <h1>WHAT'S NEW ✨</h1><br><br>
+
+  <div class="scrollbox">
+    <button class="arrow-btn left" id="prevBtn">←</button>
+
+    <div class="images" id="imagescro">
+      <!-- Original images -->
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/FOGA_TC_b1adc55dbe.jpg" alt="1" id="kp">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/1_a49479332f.jpg" alt="2">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/image_2025_10_27_12_38_04_585_37d7e17a44.jpg" alt="3">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/global_jude_bellingham_pack_football_fw25_launch_glp_card_teaser_d_5d5fed49d8.jpg" alt="4">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/09_originals_ss25_the_original_introduce_catlp_tc_rivalry_d_6c3f8d78bf.jpg" alt="5">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/global_wales_bonner_originals_fw25_launch_hp_navigation_card_teaser_asset_d_5ae23f9890.jpg" alt="6">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_600,w_600/08_originals_ss25_the_original_introduce_catlp_tc_forum_m_976d4db316.jpg" alt="7">
+
+      <!-- Duplicate for looping -->
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/FOGA_TC_b1adc55dbe.jpg" alt="dup1">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/1_a49479332f.jpg" alt="dup2">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/image_2025_10_27_12_38_04_585_37d7e17a44.jpg" alt="dup3">
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/global_jude_bellingham_pack_football_fw25_launch_glp_card_teaser_d_5d5fed49d8.jpg" alt="dup4">
+    </div>
+
+    <button class="arrow-btn right" id="nextBtn">→</button>
+  </div><br><br>
+
+ 
+      
+    
+
+
+
+ <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Select your sport, find your gear, and Get in the game!</h1>
+ <br><br>
+
+ <div class="scrollbox">
+    <button class="arrow-btn left" id="prevBtn">←</button>
+
+    <div class="images" id="imagescro">
+      <!-- Original 7 images -->
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/running_5_0f50633095.jpg" alt="img1">
+     <div>
+      <a href="" class="link"><b>RUNNING</b></a>
+     </div>
+     
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/swimming_33f1a2a1b2.jpg" alt="img2">
+      <div>
+      <a href="" class="link"><b>SWIMMING</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/golf_e302f4caf3.jpg" alt="img3">
+      <div>
+      <a href="" class="link"><b>GOLF</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/tennis_ecdd294807.jpg" alt="img4">
+      <div>
+      <a href="" class="link"><b>TENIS</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/training_bf8bd54e13.jpg" alt="img5">
+      <div>
+      <a href="" class="link"><b>TRANING</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/basketball_07660f1752.jpg" alt="img6">
+     <div>
+      <a href="" class="link"><b>BASKETBALL</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/Football_1_59a19bee73.jpg" alt="img7">
+     <div>
+      <a href="" class="link"><b>FOOTBALL</b></a>
+     </div>
+
+      <!-- Duplicate 4 for smooth loop -->
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/swimming_33f1a2a1b2.jpg" alt="dup1">
+      <div>
+      <a href="" class="link"><b>SWIMMING</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/running_5_0f50633095.jpg" alt="dup2">
+     <div>
+      <a href="" class="link"><b>RUNNING</b></a>
+     </div>
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/training_bf8bd54e13.jpg" alt="img5">
+      <div>
+      <a href="" class="link"><b>TRANING</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/basketball_07660f1752.jpg" alt="img6">
+     <div>
+      <a href="" class="link"><b>BASKETBALL</b></a>
+     </div>
+
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/Football_1_59a19bee73.jpg" alt="img7">
+     <div>
+      <a href="" class="link"><b>FOOTBALL</b></a>
+     </div>
+     
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/golf_e302f4caf3.jpg" alt="dup3">
+     <div>
+      <a href="" class="link"><b>GOLF</b></a>
+     </div>
+      <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/tennis_ecdd294807.jpg" alt="dup4">
+    <div>
+      <a href="" class="link"><B>TENIS</B></a>
+     </div>
+    </div>
+    
+
+    <button class="arrow-btn right" id="nextBtn">→</button>
+  </div><br><br><br><br>
+    <!--Join Banner-->
+    <section class="join-banner">
+        <h2>JOIN ADIDAS AND GET 10% OFF</h2>
+        <Button class="signup-btn">SIGN UP FOR FREE -></Button>
+    </section>
+
+    <!--Footer Section-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>PRODUCTS</h3>
+                <ul>
+                    <li>Footwear</li>
+                    <li>Clothing</li>
+                    <li>Accessories</li>
+                    <li>Outlet-Sale</li>
+                    <li>New Arrivals</li>
+                    <li>Flat 50% Off!</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sports</h3>
+                <ul>
+                    <li>Cricket</li>
+                    <li>Running</li>
+                    <li>Football</li>
+                    <li>Gym/Training</li>
+                    <li>Tennis</li>
+                    <li>Hiking & Outdoor</li>
+                    <li>Basketball</li>
+                    <li>Swimming</li>
+                    <li>Skateboarding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COLLECTIONS</h3>
+                <ul>
+                    <li>Ultraboost</li>
+                    <li>Superstar</li>
+                    <li>NMD</li>
+                    <li>Stan Smith</li>
+                    <li>Sustainability</li>
+                    <li>Predator</li>
+                    <li>Parley</li>
+                    <li>Adicolor</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li>Help</li>
+                    <li>UNiDays</li>
+                    <li>Customer Services</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Shipping</li>
+                    <li>Order Tracker</li>
+                    <li>Store Finder</li>
+                    <li>adiClub</li>
+                    <li>Terms & Conditions</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COMPANY INFO</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Omega stories</li>
+                    <li>Omega Apps</li>
+                    <li>Entity Details</li>
+                    <li>Press</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOWS US</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                                width="24"></a></li>
+                    <li><a href="#"><img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-logo-icon-svg-download-png-83440.png?f=webp&w=512" alt="Facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p>©2024 Omega India Marketing Pvt. Ltd</p>
+            <ul class="footer-links">
+                <li>Cookie Settings</li>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="demo1.js"></script>
+</body>
+</html>
+

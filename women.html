@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+     
+    .main {
+      width: 100%;
+      height: 1000px;
+    }
+
+    .img {
+      width: 100%;
+      height: 500px;
+      background-image: url(./asset/img1.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .maincon{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 700vh;
+    }
+    .con1{
+        width: 100%;
+        height: 500px;
+        /* border: 2px solid rgb(0, 55, 255); */
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 130px; */
+        gap: 20px;
+    }
+    .box{
+        /* border: 2px solid rebeccapurple; */
+        border-radius: 30px;
+        width: 250px;
+        height: 300px;
+    }
+    
+   .imgk{
+     width: 250px;
+     height: 300px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+      border-radius: 30px;
+    }
+    .imgk:hover{
+         box-shadow: rgb(41, 82, 125) 0px 20px 30px -10px;
+    }
+    .video{
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+    
+    /* Join Banner */
+    .join-banner {
+      background-color: #4b8a76;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .join-banner h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .signup-btn {
+      background: white;
+      color: black;
+      border: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: 0.3s;
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    .signup-btn:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 60px 80px 30px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+
+    .social-icons img {
+      filter: invert(1);
+      cursor: pointer;
+      transition: 0.3s;
+      width: 40px;
+      max-width: 85%;
+      /* margin: 0 10px; */
+      color: rgb(211, 25, 25);
+      background-color: brown;
+    }
+
+    .social-icons img:hover {
+      opacity: 0.7;
+      background-color: red;
+      color: red;
+    }
+
+    .social-icons img:active {
+      display: none;
+      position: relative;
+      top: 2px;
+      gap: 15px;
+      margin-top: 10px;
+      width: 24px;
+      max-width: 100%;
+      margin: 0 5px;
+    }
+
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-links li {
+      color: #ccc;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .footer-links li:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      footer {
+        padding: 50px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color:white;
+        padding: 20px;
+        /* bottom: 10px; */
+
+      }
+
+      .join-banner h2 {
+        font-size: 1.3rem;
+      }
+
+      .signup-btn {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .footer-center {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer {
+        padding: 40px 20px;
+        align-items: center;
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+      <ul class="ul">
+        <div class="logo"></div>
+        <li><a href="demo1.html" style="text-decoration: none; color: black;">HOME</a></li>
+        <li><a href="men.html" style="text-decoration: none; color: black;">MEN</a></li>
+        <li>WOMEN</li>
+        <li><a href="kids.html" style="text-decoration: none; color: black;">KIDS</a></li>
+        <li><a href="cart.html" class="cart-btn" style="text-decoration: none; color: black;">🛒 CART</a></li>
+      </ul>
+    </div><br><br>
+    
+    <!-- 1  gucci shoes-->
+    <div class="maincon">
+        <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1750147272/851419_BNC00_1000_002_090_0000_Light.jpg');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹70000.00
+                        <p style="font-weight: 200;">
+                           Women's Gucci Horsebit slingback pump<br>
+                            <u style="cursor: pointer;" onclick="addToCart(' Womens Gucci Horsebit slingback pump',70000.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1750147272/851419_BNC00_1000_002_090_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1748621760/832443_BKO00_9540_002_095_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹13999.00
+                        <p style="font-weight: 200;">
+                          Women's loafer pump with Horsebit <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Womens loafer pump with Horsebit',13999.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1748621760/832443_BKO00_9540_002_095_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1752513393/850327_AAFK1_6207_002_090_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹100000.00
+                        <p style="font-weight: 200;">
+                        Women's slide sandal with crystal Interlocking G <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Womens slide sandal with crystal Interlocking G ',100000.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1752513393/850327_AAFK1_6207_002_090_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1752513333/845891_AAFK1_1000_001_090_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹63999.00
+                        <p style="font-weight: 200;">
+                         Women's slide sandal with crystal Interlocking G <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Womens slide sandal with crystal Interlocking G',63999.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1752513333/845891_AAFK1_1000_001_090_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1725003071/812307_FAD21_2549_002_100_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹218776.00
+                        <p style="font-weight: 200;">
+                           Women's pump with crystal Interlocking G <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Womens pump with crystal Interlocking G',218776.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1725003071/812307_FAD21_2549_002_100_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 2 gucci shoes -->
+         <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('http://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1748967331/849565_AAFQV_2118_001_100_0000_Light.jpg');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹117000.00
+                        <p style="font-weight: 200;">
+                           Women's pump with crystal Interlocking G <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Womens pump with crystal Interlocking G ',117000.00,'http://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1748967331/849565_AAFQV_2118_001_100_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1750147262/851086_BNC00_3411_002_095_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹19999.00
+                        <p style="font-weight: 200;">
+                          Women's Gucci Horsebit mule <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Womens Gucci Horsebit mule ',19999.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1750147262/851086_BNC00_3411_002_095_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1748969208/836809_FAEQ0_9941_002_095_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹70000.00
+                        <p style="font-weight: 200;">
+                         Women's Gucci Horsebit ballet flat <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('DURAMO SPEED 2 IK',70000.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1748969208/836809_FAEQ0_9941_002_095_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1757520017/852995_0MW00_8106_002_090_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹83999.00
+                        <p style="font-weight: 200;">
+                          Women's Gucci Horsebit ballet flat <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Womens Gucci Horsebit ballet flat',83999.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1757520017/852995_0MW00_8106_002_090_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1754577026/852663_BNC00_1000_002_090_0000_Light.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹91876.00
+                        <p style="font-weight: 200;">
+                           Women's Gucci Horsebit ballet flat <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Womens Gucci Horsebit ballet flat',91876.00,'https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1754577026/852663_BNC00_1000_002_090_0000_Light.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <video loop="" muted="" autoplay="" playsinline="" aria-label="The black adidas Dropset 3 strength training shoe floating mid-air against a gradient grey background." 
+        width="800px" height="700px" style="margin-left: 650px;"><source src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/global_dropset_training_fw25_launch_plp_dropset_banner_snippet_d_8182a09193.mp4" type="video/mp4" width="1400" height="980" media="(min-width: 960px)"></video>
+
+         <div style="
+    position: absolute; 
+    top: 190%; 
+    left: 2%; 
+    color: rgb(5, 5, 5); 
+    font-family: Arial, sans-serif;">
+    <h1 style="font-size: 30px;">Award-winning Dropset 3</h1><br>
+    <p>
+     Time to lift heavy? Stay grounded and locked in with a trainer that <br>
+      keeps you in control—so you can focus on building proper strength, no slip-ups.
+    </p>
+  </div>
+
+            <!-- 3 -->
+         <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/08db0a17a14849928e0addeb2b00c97a_9366/jogit-shoes.jpg');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹7000.0
+                        <p style="font-weight: 200;">
+                            DURAMO SPEED 2 IK <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('DURAMO SPEED 2 IK',7000.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/08db0a17a14849928e0addeb2b00c97a_9366/jogit-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a20bd1b87054ccca5582754be95fcc3_9366/adizero-sl-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹13999.0
+                        <p style="font-weight: 200;">
+                           Adizero EVO SL Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Adizero EVO SL Shoes',13999.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a20bd1b87054ccca5582754be95fcc3_9366/adizero-sl-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/be6293fbb7df493d962c1a036d1c6e1a_9366/alphaboost-v2-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹10000
+                        <p style="font-weight: 200;">
+                           Supernova Rise 2 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Supernova Rise 2 Running Shoes',10000.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/be6293fbb7df493d962c1a036d1c6e1a_9366/alphaboost-v2-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/999b0987aaff43dc9280bde76ef9339c_9366/4dfwd-4-running-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.0
+                        <p style="font-weight: 200;">
+                           Ultrarun 5 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Ultrarun 5 Running Shoes ',6399.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/999b0987aaff43dc9280bde76ef9339c_9366/4dfwd-4-running-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/dd40cf013ae54c58bcac104158999f08_9366/supernova-stride-2-running-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹21876.0
+                        <p style="font-weight: 200;">
+                            Galaxy 7 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Galaxy 7 Running Shoes',21876.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/dd40cf013ae54c58bcac104158999f08_9366/supernova-stride-2-running-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 t-shirt -->
+         <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/edef4719-05ce-4d38-a468-c3354ac61994/AS+W+NSW+SS+TEE+OC+VARZITY.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹4999.00
+                        <p style="font-weight: 200;">
+                           Jordan Flight Mountainside <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Jordan Flight Mountainside',4999.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/edef4719-05ce-4d38-a468-c3354ac61994/AS+W+NSW+SS+TEE+OC+VARZITY.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/40afa74e-4771-4f77-af66-816a3660a3e2/AS+W+NSW+PHNX+FLC+OS+PO+HOODIE.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+                        <p style="font-weight: 200;">
+                          Just Do It: Nike Basketball <br>
+                            <u style="cursor: pointer;" onclick="addToCart(' Just Do It: Nike Basketball',1399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/40afa74e-4771-4f77-af66-816a3660a3e2/AS+W+NSW+PHNX+FLC+OS+PO+HOODIE.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/d98c9df3-a812-4307-8156-93a4e92e0171/AS+W+NK+24.7+DF+HZ+TOP+SOFT.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1900.00
+                        <p style="font-weight: 200;">
+                        Nike One Fitted<br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Nike One Fitted',1900.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/d98c9df3-a812-4307-8156-93a4e92e0171/AS+W+NK+24.7+DF+HZ+TOP+SOFT.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/c6f63c75-2ea9-4541-a2a1-f4a8156c11ea/U+NK+TEE+CALLING+BASKETBALL+QS.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹3399.00
+                        <p style="font-weight: 200;">
+                          Nike One Swoosh <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Nike One Swoosh ',3399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/c6f63c75-2ea9-4541-a2a1-f4a8156c11ea/U+NK+TEE+CALLING+BASKETBALL+QS.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/168746e4-bde7-42cb-9ee8-1dd56067377a/AS+W+NSW+NK+CHLL+SS+SQR+NCK+TO.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹2187.00
+                        <p style="font-weight: 200;">
+                          Nike Running Division <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Nike Running Division',2187.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/168746e4-bde7-42cb-9ee8-1dd56067377a/AS+W+NSW+NK+CHLL+SS+SQR+NCK+TO.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- 5 gogel-->
+  <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://i5.walmartimages.com/asr/b3655915-225d-408f-a67a-799c95a95eb0.868c1a87e596451c4b3df6bc1cc6c245.jpeg?odnHeight=372&odnWidth=372&odnBg=FFFFFF');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹70000.00
+                        <p style="font-weight: 200;">
+                           Specialized fit sunglasses <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Specialized fit sunglasses ',70000.00,'https://i5.walmartimages.com/asr/b3655915-225d-408f-a67a-799c95a95eb0.868c1a87e596451c4b3df6bc1cc6c245.jpeg?odnHeight=372&odnWidth=372&odnBg=FFFFFF')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://i.pinimg.com/originals/73/a4/bc/73a4bc28fcbcf9583fe9015862f251e9.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹13999.00
+                        <p style="font-weight: 200;">
+                          Frameless oval sunglasses <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Frameless oval sunglasses',13999.00,'https://i.pinimg.com/originals/73/a4/bc/73a4bc28fcbcf9583fe9015862f251e9.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://img-cdn.thepublive.com/filters:format(webp)/elle-india/media/post_attachments/wp-content/uploads/2024/02/Gucci-Eyewear-SS24-Adv.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹100000
+                        <p style="font-weight: 200;">
+                          Navigator frame sunglasses <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Navigator frame sunglasses',10000.00,'https://img-cdn.thepublive.com/filters:format(webp)/elle-india/media/post_attachments/wp-content/uploads/2024/02/Gucci-Eyewear-SS24-Adv.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://i.pinimg.com/originals/e8/fa/6b/e8fa6b35a1b13fef25d22d23e85982b6.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹63999.00
+                        <p style="font-weight: 200;">
+                           Cat eye frame sunglasses <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Cat eye frame sunglasses',63999.00,'https://i.pinimg.com/originals/e8/fa/6b/e8fa6b35a1b13fef25d22d23e85982b6.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://cdna.lystit.com/photos/eyewear-club/7a143457/gucci-Black-GG0956S-Oversized-Black-Sunglasses-With-Maxi-Logo.jpeg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹218776.00
+                        <p style="font-weight: 200;">
+                          Rectangular optical frame <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Rectangular optical frame',218776.00,'https://cdna.lystit.com/photos/eyewear-club/7a143457/gucci-Black-GG0956S-Oversized-Black-Sunglasses-With-Maxi-Logo.jpeg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div><br>
+        <div>
+            <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/global_dropset_training_fw25_launch_plp_dropset_banner_statement_d_17de9ea6c4.jpg" 
+            alt="kp" srcset="" width="1200px" height="550px" style="margin-left: 150px;">
+        </div>
+                 <div style="
+    position: absolute; 
+    top: 490%; 
+    left: 20%; 
+    color: rgb(255, 255, 255); 
+    font-family: Arial, sans-serif;">
+    <h1 style="font-size: 60px;">“Dropset 3 is a brilliant workout <br>
+         shoe for strength training – one of <br>
+          the best I’ve tried.”</h1><br>
+    
+  </div>
+        <!-- 6  hoodies-->
+        <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/388d44f1-c917-4f23-9b32-9acf8c1a9995/AS+W+NSW+CLUB+FLC+CREW+STD.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹7000.0
+                        <p style="font-weight: 200;">
+                            DURAMO SPEED 2 IK <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('DURAMO SPEED 2 IK',7000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/388d44f1-c917-4f23-9b32-9acf8c1a9995/AS+W+NSW+CLUB+FLC+CREW+STD.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/073e755d-df8e-44be-a989-e26fe6a92215/AS+W+NK+ONE+DF+CREW+LBR.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹13999.0
+                        <p style="font-weight: 200;">
+                           Adizero EVO SL  <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Adizero EVO SL',13999.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/073e755d-df8e-44be-a989-e26fe6a92215/AS+W+NK+ONE+DF+CREW+LBR.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/53301a08-4527-4bf0-bde0-38f0e691b99c/AS+W+NSW+TCH+FLC+TLRD+JKT.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹10000
+                        <p style="font-weight: 200;">
+                           Supernova Rise 2 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Supernova Rise 2 Running Shoes',10000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/53301a08-4527-4bf0-bde0-38f0e691b99c/AS+W+NSW+TCH+FLC+TLRD+JKT.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4a479f49-177d-4920-9ad2-412531f809ce/W+J+FLT+FLC+FT+PO+24.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.0
+                        <p style="font-weight: 200;">
+                           Ultrarun 5 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Ultrarun 5 Running Shoes',6399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4a479f49-177d-4920-9ad2-412531f809ce/W+J+FLT+FLC+FT+PO+24.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7fa626e7-173e-4714-8d3b-404ac575a38c/AS+W+NSW+PHNX+FLC+FT+OOS+CRW+O.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹21876.0
+                        <p style="font-weight: 200;">
+                            Galaxy 7 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Galaxy 7 Running Shoes',21876.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7fa626e7-173e-4714-8d3b-404ac575a38c/AS+W+NSW+PHNX+FLC+FT+OOS+CRW+O.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 7 makup -->
+        <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://i5.walmartimages.com/seo/Maybelline-Fit-Me-Matte-Poreless-Liquid-Foundation-Makeup-238-Rich-Tan-1-fl-oz_c2c0ccfc-8e83-4dbc-bafe-52f598f93184.5eaa35cce34bb0ba3c9d5617026a4181.jpeg');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹999
+                        <p style="font-weight: 200;">
+                           Foundation Makeup <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Foundation Makeup',999.00,'https://i5.walmartimages.com/seo/Maybelline-Fit-Me-Matte-Poreless-Liquid-Foundation-Makeup-238-Rich-Tan-1-fl-oz_c2c0ccfc-8e83-4dbc-bafe-52f598f93184.5eaa35cce34bb0ba3c9d5617026a4181.jpeg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://i5.walmartimages.com/seo/Maybelline-Lash-Sensational-Washable-Mascara-Brownish-Black_2c4b14a1-e855-4bbd-a4ad-1ad53bfc8238.34bfb4783703c432d51d29976bcf058f.jpeg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+                        <p style="font-weight: 200;">
+                          Long-Lasting Skin Tint with Vitamin C <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Long-Lasting Skin Tint with Vitamin C',1399.00,'https://i5.walmartimages.com/seo/Maybelline-Lash-Sensational-Washable-Mascara-Brownish-Black_2c4b14a1-e855-4bbd-a4ad-1ad53bfc8238.34bfb4783703c432d51d29976bcf058f.jpeg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://licilasicdn.s3.amazonaws.com/public/product_images/43801/main/original.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1000
+                        <p style="font-weight: 200;">
+                         Dream Urban Cover® Foundation Makeup, Spf 50 <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('   Dream Urban Cover® Foundation Makeup, Spf 50 ',1000.00,'https://licilasicdn.s3.amazonaws.com/public/product_images/43801/main/original.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.dZYvQgO9V6l3nXJ7LU-I1AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹699.00
+                        <p style="font-weight: 200;">
+                          Instant Age Rewind® Eraser Treatment Makeup <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Instant Age Rewind® Eraser Treatment Makeup',699.00,'https://tse3.mm.bing.net/th/id/OIP.dZYvQgO9V6l3nXJ7LU-I1AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.qXhnfoMz_g4kaGSLqSywGAAAAA?w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1800.00
+                        <p style="font-weight: 200;">
+                          Color Strike® Cream-To-Powder Eye Shadow <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Color Strike® Cream-To-Powder Eye Shadow ',1800.00,'https://tse4.mm.bing.net/th/id/OIP.qXhnfoMz_g4kaGSLqSywGAAAAA?w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                    
+                </div>
+                
+            </div>
+            
+        </div><br><br><br>
+         <!--Join Banner-->
+    <section class="join-banner">
+        <h2>JOIN ADIDAS AND GET 10% OFF</h2>
+        <Button class="signup-btn">SIGN UP FOR FREE -></Button>
+    </section>
+
+    <!--Footer Section-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>PRODUCTS</h3>
+                <ul>
+                    <li>Footwear</li>
+                    <li>Clothing</li>
+                    <li>Accessories</li>
+                    <li>Outlet-Sale</li>
+                    <li>New Arrivals</li>
+                    <li>Flat 50% Off!</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sports</h3>
+                <ul>
+                    <li>Cricket</li>
+                    <li>Running</li>
+                    <li>Football</li>
+                    <li>Gym/Training</li>
+                    <li>Tennis</li>
+                    <li>Hiking & Outdoor</li>
+                    <li>Basketball</li>
+                    <li>Swimming</li>
+                    <li>Skateboarding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COLLECTIONS</h3>
+                <ul>
+                    <li>Ultraboost</li>
+                    <li>Superstar</li>
+                    <li>NMD</li>
+                    <li>Stan Smith</li>
+                    <li>Sustainability</li>
+                    <li>Predator</li>
+                    <li>Parley</li>
+                    <li>Adicolor</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li>Help</li>
+                    <li>UNiDays</li>
+                    <li>Customer Services</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Shipping</li>
+                    <li>Order Tracker</li>
+                    <li>Store Finder</li>
+                    <li>adiClub</li>
+                    <li>Terms & Conditions</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COMPANY INFO</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Omega stories</li>
+                    <li>Omega Apps</li>
+                    <li>Entity Details</li>
+                    <li>Press</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOWS US</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                                width="24"></a></li>
+                    <li><a href="#"><img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-logo-icon-svg-download-png-83440.png?f=webp&w=512" alt="Facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p>©2024 Omega India Marketing Pvt. Ltd</p>
+            <ul class="footer-links">
+                <li>Cookie Settings</li>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+    </footer>
+ <script src="men.js"></script>
+</div>    
+</body>
+</html>

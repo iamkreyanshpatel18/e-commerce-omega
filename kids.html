@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+     
+    .main {
+      width: 100%;
+      height: 1000px;
+    }
+
+    .img {
+      width: 100%;
+      height: 500px;
+      background-image: url(./asset/img1.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .maincon{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 600vh;
+    }
+    .con1{
+        width: 100%;
+        height: 500px;
+        /* border: 2px solid rgb(0, 55, 255); */
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 130px; */
+        gap: 20px;
+    }
+    .box{
+        /* border: 2px solid rebeccapurple; */
+        border-radius: 30px;
+        width: 250px;
+        height: 300px;
+    }
+    
+   .imgk{
+     width: 250px;
+     height: 300px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+      border-radius: 30px;
+    }
+    .imgk:hover{
+         box-shadow: rgb(41, 82, 125) 0px 20px 30px -10px;
+    }
+    .video{
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+     /* Join Banner */
+    .join-banner {
+      background-color: #4b8a76;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .join-banner h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .signup-btn {
+      background: white;
+      color: black;
+      border: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: 0.3s;
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    .signup-btn:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 60px 80px 30px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+
+    .social-icons img {
+      filter: invert(1);
+      cursor: pointer;
+      transition: 0.3s;
+      width: 40px;
+      max-width: 85%;
+      /* margin: 0 10px; */
+      color: rgb(211, 25, 25);
+      background-color: brown;
+    }
+
+    .social-icons img:hover {
+      opacity: 0.7;
+      background-color: red;
+      color: red;
+    }
+
+    .social-icons img:active {
+      display: none;
+      position: relative;
+      top: 2px;
+      gap: 15px;
+      margin-top: 10px;
+      width: 24px;
+      max-width: 100%;
+      margin: 0 5px;
+    }
+
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-links li {
+      color: #ccc;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .footer-links li:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      footer {
+        padding: 50px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color:white;
+        padding: 20px;
+        /* bottom: 10px; */
+
+      }
+
+      .join-banner h2 {
+        font-size: 1.3rem;
+      }
+
+      .signup-btn {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .footer-center {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer {
+        padding: 40px 20px;
+        align-items: center;
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+      <ul class="ul">
+        <div class="logo"></div>
+        <li><a href="demo1.html" style="text-decoration: none; color: black;">HOME</a></li>
+        <li><a href="men.html" style="text-decoration: none; color: black;">MEN</a></li>
+        <li><a href="women.html" style="text-decoration: none; color: black;">WOMEN</a></li>
+        <li>KIDS</a></li>
+           <li><a href="cart.html" class="cart-btn" style="text-decoration: none; color: black;">🛒 CART</a></li>
+      </ul>
+    </div><br><br>
+
+    <!-- 1 -->
+    <div class="maincon">
+        <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/b0b21557-e1eb-4a4b-9a4e-5dc52e71ec37/NIKE+STAR+RUNNER+5+%28PS%29.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹7000.0
+                        <p style="font-weight: 200;">
+                            DURAMO SPEED 2 IK <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('DURAMO SPEED 2 IK',7000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/b0b21557-e1eb-4a4b-9a4e-5dc52e71ec37/NIKE+STAR+RUNNER+5+%28PS%29.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+
+
+          <div class="box" id="b2">
+  <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/dea5c774-24b6-4a97-be4f-f4d281c6ff36/NIKE+SWOOSH+1+%28TD%29.png');"></div>
+
+  <div class="name" id="n1">
+    <h3 style="margin-top: 2px; margin-left: 25px;">₹13999.00
+      <p style="font-weight: 200;">
+        Adizero EVO SL Shoes <br>
+        <u style="cursor: pointer;" 
+           onclick="addToCart('Adizero EVO SL Shoes', 13999.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/dea5c774-24b6-4a97-be4f-f4d281c6ff36/NIKE+SWOOSH+1+%28TD%29.png')">
+           shop now
+        </u>
+      </p>
+    </h3>
+  </div>
+</div>
+
+
+<div class="box" id="b3">
+  <div class="imgk" 
+    style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/956f694e-6ab5-48c5-a47d-fef6286590a8/KOBE+IX+ELITE+%28GS%29.png');">
+  </div>
+
+  <div class="name" id="n1">
+    <h3 style="margin-top: 2px; margin-left: 25px;">₹10000
+      <p style="font-weight: 200;">
+        Supernova Rise 2 Running Shoes <br>
+        <u style="cursor: pointer;"
+           onclick="addToCart('Supernova Rise 2 Running Shoes', 10000.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/956f694e-6ab5-48c5-a47d-fef6286590a8/KOBE+IX+ELITE+%28GS%29.png')">
+           shop now
+        </u>
+      </p>
+    </h3>
+  </div>
+</div>
+
+
+<div class="box" id="b4">
+  <div class="imgk" 
+    style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7a8f36e6-2475-44b7-b03f-b941531f3047/NIKE+STAR+RUNNER+5+%28PS%29.png');">
+  </div>
+
+  <div class="name" id="n1">
+    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.00
+      <p style="font-weight: 200;">
+        Ultrarun 5 Running Shoes <br>
+        <u style="cursor: pointer;"
+           onclick="addToCart('Ultrarun 5 Running Shoes', 6399.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7a8f36e6-2475-44b7-b03f-b941531f3047/NIKE+STAR+RUNNER+5+%28PS%29.png')">
+           shop now
+        </u>
+      </p>
+    </h3>
+  </div>
+</div>
+
+
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/31c9e772-5aca-4ba5-9d1b-ef451c9ea651/JORDAN+TATUM+4+%28PS%29.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹21876.0
+                        <p style="font-weight: 200;">
+                            Galaxy 7 Running Shoes <br>
+                            <u style="cursor: pointer;">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div><br><br><br>
+
+        <div>
+            <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/glbl_football_FW_25_WC_26_OMB_Launch_Combined_PLP_Banner_Statement_d_5049677cf2.jpg" 
+            alt="pk" srcset="" width="1320px" height="500px" style="margin-left: 100px;">
+        </div>
+
+
+
+
+        
+        <!-- 2 -->
+     <div class="con1">
+  <div class="box" id="b1">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_default/2969cae0-e893-4842-b9a6-ff966fb74a90/JR+PHANTOM+6+HIGH+ACAD+FG%2FMG.png');"></div>
+    <div class="name" id="n1"><br>
+      <h3 style="margin-top: -15px; margin-left: 25px;">₹4000.00
+        <p style="font-weight: 200;">
+          Nike Sunray Protect 4 <br>
+          <u style="cursor: pointer;" 
+             onclick="addToCart('Nike Sunray Protect 4', 4000.00, 'https://static.nike.com/a/images/t_default/2969cae0-e893-4842-b9a6-ff966fb74a90/JR+PHANTOM+6+HIGH+ACAD+FG%2FMG.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b2">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_default/8fc2008e-931b-4255-9894-36677688bef6/TEAM+HUSTLE+D+12+%28TD%29.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+        <p style="font-weight: 200;">
+          Jordan 1 Mid SE <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Jordan 1 Mid SE', 1399.00, 'https://static.nike.com/a/images/t_default/8fc2008e-931b-4255-9894-36677688bef6/TEAM+HUSTLE+D+12+%28TD%29.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b3">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_default/duaqtsfv4rjxw5ntqjv5/NIKE+KAWA+SLIDE+%28GS%2FPS%29.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹5000.00
+        <p style="font-weight: 200;">
+          Air Jordan 1 Low SE <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Air Jordan 1 Low SE', 5000.00, 'https://static.nike.com/a/images/t_default/duaqtsfv4rjxw5ntqjv5/NIKE+KAWA+SLIDE+%28GS%2FPS%29.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b4">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_default/2e8126c4-9889-44d1-aad8-89487f652fa9/SUNRAY+PROTECT+4+%28TD%29.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.00
+        <p style="font-weight: 200;">
+          Nike Star Runner 5 <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Nike Star Runner 5', 6399.00, 'https://static.nike.com/a/images/t_default/2e8126c4-9889-44d1-aad8-89487f652fa9/SUNRAY+PROTECT+4+%28TD%29.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b5">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_default/ssnaebve32cyuxalgggl/NIKE+SUNRAY+PROTECT+2+%28TD%29.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹2187.00
+        <p style="font-weight: 200;">
+          Galaxy 7 Running Shoes <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Galaxy 7 Running Shoes', 2187.00, 'https://static.nike.com/a/images/t_default/ssnaebve32cyuxalgggl/NIKE+SUNRAY+PROTECT+2+%28TD%29.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+
+        <!-- 3 t-shirt -->
+   <div class="con1">
+  <div class="box" id="b1">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6bd27e5f-c552-4d57-a1c9-b90596e86ce2/G+NSW+CLUB+FT+BXY+CREW+GX+STAR.png');"></div>
+    <div class="name" id="n1"><br>
+      <h3 style="margin-top: -15px; margin-left: 25px;">₹2000.00
+        <p style="font-weight: 200;">
+          Nike Sportswear <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Nike Sportswear', 2000.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6bd27e5f-c552-4d57-a1c9-b90596e86ce2/G+NSW+CLUB+FT+BXY+CREW+GX+STAR.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b2">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/9007d685-c085-4d54-a636-79ae355fef0a/K+NSW+LS+TEE+EMB+FUTURA+LBR.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+        <p style="font-weight: 200;">
+          Adizero EVO SL <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Adizero EVO SL', 1399.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/9007d685-c085-4d54-a636-79ae355fef0a/K+NSW+LS+TEE+EMB+FUTURA+LBR.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b3">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1cea42b6-77a6-4a90-bc4f-43c4194446ea/G+NP+DF+ONE+SS+TOP+SPORT+VNR.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1000.00
+        <p style="font-weight: 200;">
+          Supernova Rise 2.0 <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Supernova Rise 2.0', 1000.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1cea42b6-77a6-4a90-bc4f-43c4194446ea/G+NP+DF+ONE+SS+TOP+SPORT+VNR.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b4">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/c9576fc1-1875-4365-a243-e3a4afebaf71/B+NK+DF+MULTI%2B+SS+TOP+HBR.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+        <p style="font-weight: 200;">
+          Ultrarun 5a <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Ultrarun 5a', 1399.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/c9576fc1-1875-4365-a243-e3a4afebaf71/B+NK+DF+MULTI%2B+SS+TOP+HBR.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b5">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f7a36ca5-b21b-49b9-93d9-8743ad5d6ce2/K+NSW+CLUB+FLC+CREW+LS+LBR.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹2187.00
+        <p style="font-weight: 200;">
+          Galaxy 7babaq <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Galaxy 7babaq', 2187.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f7a36ca5-b21b-49b9-93d9-8743ad5d6ce2/K+NSW+CLUB+FLC+CREW+LS+LBR.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+        <!-- 4 hoodies -->
+       <div class="con1">
+  <div class="box" id="b1">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1819e8df-88e5-4180-9a5a-79959d0c928b/KB+K+NK+WINTERIZED+TOP.png');"></div>
+    <div class="name" id="n1"><br>
+      <h3 style="margin-top: -15px; margin-left: 25px;">₹4000.00
+        <p style="font-weight: 200;">
+          DURAMO SPEED 2 IK <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('DURAMO SPEED 2 IK', 4000.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1819e8df-88e5-4180-9a5a-79959d0c928b/KB+K+NK+WINTERIZED+TOP.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b2">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/04a1d9bb-cbda-426d-a460-ae306dfa2b53/G+NSW+PO+HDY+COZY.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹5999.00
+        <p style="font-weight: 200;">
+          Kobe <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Kobe', 5999.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/04a1d9bb-cbda-426d-a460-ae306dfa2b53/G+NSW+PO+HDY+COZY.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b3">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/3959b5bc-8900-4321-b4ff-c89f2af1d8c2/G+NSW+CLUB+FLC+FT+BXY+CRW+XKAP.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1450.00
+        <p style="font-weight: 200;">
+          Nike Sportswear Club Fleece <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Nike Sportswear Club Fleece', 1450.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/3959b5bc-8900-4321-b4ff-c89f2af1d8c2/G+NSW+CLUB+FLC+FT+BXY+CRW+XKAP.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b4">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/92a97b01-70c5-434f-9dc2-7e6177dcc39f/KB+K+NK+TF+FUND+PO+HDY.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹2399.00
+        <p style="font-weight: 200;">
+          Nike <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Nike', 2399.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/92a97b01-70c5-434f-9dc2-7e6177dcc39f/KB+K+NK+TF+FUND+PO+HDY.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b5">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bac3cb28-d0b7-41bb-a9cf-a7fa4b16c911/G+NSW+CLUB+FLC+BXY+HDY+GX+SHNE.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹2186.00
+        <p style="font-weight: 200;">
+          Nike Club Fleece <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Nike Club Fleece', 2186.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bac3cb28-d0b7-41bb-a9cf-a7fa4b16c911/G+NSW+CLUB+FLC+BXY+HDY+GX+SHNE.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+        <div>
+            <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/glbl_football_FW_25_WC_26_OMB_Launch_Combined_PLP_Banner_Snippet_d_07c3ff87f0.jpg" 
+            alt="" srcset="" width="800px" height="500px" style="margin-left: 350px;">
+        </div>
+         <div style="
+    position: absolute; 
+    top: 420%; 
+    left: 68%; 
+    color: rgb(218, 247, 5); 
+    font-family: Arial, sans-serif;">
+    <h1 style="font-size: 60px;">Supercomfort. Supernova.</h1><br>
+    <p>
+      Experience the Supercomfort of Supernova Rise 2<br>
+      — Dreamstrike+ cushions every step with expertly engineered<br>
+      super-foam, delivering ideal comfort and support.
+    </p>
+  </div>
+  <div style="position: absolute; 
+  top: 380%;
+  left: 5%;
+  color: rgb(0, 0, 0);">
+    <h1 style="font-size: 80px;" >Discover the Trionda balls</h1>
+    <p>Our FIFA World Cup 26™ balls are crafted for every kind <br>
+         of play. Learn what sets each ball apart and find the one designed <br>
+          for you.</p>
+  </div>
+
+
+  <!-- 5 shots -->
+<div class="con1">
+  <div class="box" id="b1">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f84b675a-9a06-4442-80cb-6f36cb6cc6e4/K+NSW+CLUB+FT+SHORT+LBR.png');"></div>
+    <div class="name" id="n1"><br>
+      <h3 style="margin-top: -15px; margin-left: 25px;">₹2000.00
+        <p style="font-weight: 200;">
+          DURAMO SPEED 2 <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('DURAMO SPEED 2', 2000.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f84b675a-9a06-4442-80cb-6f36cb6cc6e4/K+NSW+CLUB+FT+SHORT+LBR.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b2">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/3472947e-9757-4506-a137-96f3d349df78/K+NSW+CITY+UTILITY+CARGO+SHORT.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+        <p style="font-weight: 200;">
+          Adizero EVO S <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Adizero EVO S', 1399.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/3472947e-9757-4506-a137-96f3d349df78/K+NSW+CITY+UTILITY+CARGO+SHORT.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b3">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/003934cb-d12a-4eb7-978e-3b004f7dfec2/G+NP+DF+3IN+SHORT+SPORT+PACK.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹1000.00
+        <p style="font-weight: 200;">
+          Supernova Rise 2 Running <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Supernova Rise 2 Running', 1000.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/003934cb-d12a-4eb7-978e-3b004f7dfec2/G+NP+DF+3IN+SHORT+SPORT+PACK.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b4">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/e2bfb543-1649-47f7-9dbc-1c9712159539/G+NP+DF+2IN1+KNIT+SHORT.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹2399.00
+        <p style="font-weight: 200;">
+          Ultrarun 5 Runningq <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('Ultrarun 5 Runningq', 2399.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/e2bfb543-1649-47f7-9dbc-1c9712159539/G+NP+DF+2IN1+KNIT+SHORT.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+
+  <div class="box" id="b5">
+    <div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/88eaa62f-f0bc-428b-9ccf-d56421034cd8/KB+K+NK+DF+FUND+SHORT.png');"></div>
+    <div class="name" id="n1">
+      <h3 style="margin-top: 2px; margin-left: 25px;">₹2186.00
+        <p style="font-weight: 200;">
+          xy 7 Running <br>
+          <u style="cursor: pointer;"
+             onclick="addToCart('xy 7 Running', 2186.00, 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/88eaa62f-f0bc-428b-9ccf-d56421034cd8/KB+K+NK+DF+FUND+SHORT.png')">
+             shop now
+          </u>
+        </p>
+      </h3>
+    </div>
+  </div>
+</div>
+<br><br><br>
+        
+  <h1 style="font-size: 28px; text-transform: uppercase; margin-left: 100px;">
+    Football Sports and Training Wear for Children
+  </h1>
+
+  <p style="font-size: 16px; text-align: justify; margin-top: 20px; margin-left: 100px;">
+    For true football fans, childhood memories are the most special: wearing your first jersey, watching your first match, playing your first game. <br>
+    That’s why <strong>adidas</strong> goes the extra mile to give junior football fans everything they could need in their early days of playing, supporting, or both. <br>
+    Whether making their first steps or lifting their first cups, adidas has the very best for kids football – from <br> training wear to replica kits,
+    from football toddlers to teens, it’s all covered.
+  </p>
+
+  <h2 style="margin-top: 30px; font-size: 22px; margin-left: 100px; font-weight: 100;">Small kits for the biggest fans</h2><br>
+  <p style="font-size: 16px; text-align: justify;margin-left: 100px; ">
+    If supporting a team is already in their DNA, there’s simply no time to waste in choosing from this selection of replica kits and jerseys for kids football. <br>
+    Whether clubs or national squads, scaled-down versions of the greatest teams on the planet are available in sizes all the way down to babies football, <br>
+    taking the meaning of a "life-long fan" to the next level.
+    If you’re looking to get your football toddlers decked out in team colours already, or need a <br> training top for the brightest youth talent,
+    you’ll find it all here. Because there’s no minimum age requirement for repping your team.
+  </p>
+
+  <h2 style="margin-top: 30px; font-size: 22px; margin-left: 100px;font-weight: 100 ">For all players, of any age</h2><br>
+  <p style="font-size: 16px; text-align: justify;margin-left: 100px; ">
+    There’s more to the <strong>adidas kids football</strong> selection than just replica kits and jerseys.
+    Football trainers and boots have been designed to respond to the needs <br> of younger players and are presented in an array of different designs made for a variety of playing surfaces.
+    Finding the perfect pair for a future star has never been easier. <br>
+    Tracksuits and teamwear made for youth football are also available, using innovative adidas technology such as Climalite fabric,
+    and there are even goalkeeper gloves <br> for those young number 1s.
+    Because football is a game that unites everyone regardless of age, football kids can get everything they need with adidas.
+  </p>
+<br><br><br>
+ <!--Join Banner-->
+    <section class="join-banner">
+        <h2>JOIN ADIDAS AND GET 10% OFF</h2>
+        <Button class="signup-btn">SIGN UP FOR FREE -></Button>
+    </section>
+
+    <!--Footer Section-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>PRODUCTS</h3>
+                <ul>
+                    <li>Footwear</li>
+                    <li>Clothing</li>
+                    <li>Accessories</li>
+                    <li>Outlet-Sale</li>
+                    <li>New Arrivals</li>
+                    <li>Flat 50% Off!</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sports</h3>
+                <ul>
+                    <li>Cricket</li>
+                    <li>Running</li>
+                    <li>Football</li>
+                    <li>Gym/Training</li>
+                    <li>Tennis</li>
+                    <li>Hiking & Outdoor</li>
+                    <li>Basketball</li>
+                    <li>Swimming</li>
+                    <li>Skateboarding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COLLECTIONS</h3>
+                <ul>
+                    <li>Ultraboost</li>
+                    <li>Superstar</li>
+                    <li>NMD</li>
+                    <li>Stan Smith</li>
+                    <li>Sustainability</li>
+                    <li>Predator</li>
+                    <li>Parley</li>
+                    <li>Adicolor</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li>Help</li>
+                    <li>UNiDays</li>
+                    <li>Customer Services</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Shipping</li>
+                    <li>Order Tracker</li>
+                    <li>Store Finder</li>
+                    <li>adiClub</li>
+                    <li>Terms & Conditions</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COMPANY INFO</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Omega stories</li>
+                    <li>Omega Apps</li>
+                    <li>Entity Details</li>
+                    <li>Press</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOWS US</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                                width="24"></a></li>
+                    <li><a href="#"><img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-logo-icon-svg-download-png-83440.png?f=webp&w=512" alt="Facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p>©2024 Omega India Marketing Pvt. Ltd</p>
+            <ul class="footer-links">
+                <li>Cookie Settings</li>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+    </footer>
+</div>    
+
+ <script src="men.js"></script>
+</body>
+</html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+     
+    .main {
+      width: 100%;
+      height: 1000px;
+    }
+
+    .img {
+      width: 100%;
+      height: 500px;
+      background-image: url(./asset/img1.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .maincon{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 700vh;
+    }
+    .con1{
+        width: 100%;
+        height: 500px;
+        /* border: 2px solid rgb(0, 55, 255); */
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 130px; */
+        gap: 20px;
+    }
+    .box{
+        /* border: 2px solid rebeccapurple; */
+        border-radius: 30px;
+        width: 250px;
+        height: 300px;
+    }
+    
+   .imgk{
+     width: 250px;
+     height: 300px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+      border-radius: 30px;
+    }
+    .imgk:hover{
+         box-shadow: rgb(41, 82, 125) 0px 20px 30px -10px;
+    }
+    .video{
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+    
+    /* Join Banner */
+    .join-banner {
+      background-color: #4b8a76;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .join-banner h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .signup-btn {
+      background: white;
+      color: black;
+      border: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: 0.3s;
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    .signup-btn:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 60px 80px 30px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+
+    .social-icons img {
+      filter: invert(1);
+      cursor: pointer;
+      transition: 0.3s;
+      width: 40px;
+      max-width: 85%;
+      /* margin: 0 10px; */
+      color: rgb(211, 25, 25);
+      background-color: brown;
+    }
+
+    .social-icons img:hover {
+      opacity: 0.7;
+      background-color: red;
+      color: red;
+    }
+
+    .social-icons img:active {
+      display: none;
+      position: relative;
+      top: 2px;
+      gap: 15px;
+      margin-top: 10px;
+      width: 24px;
+      max-width: 100%;
+      margin: 0 5px;
+    }
+
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-links li {
+      color: #ccc;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .footer-links li:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      footer {
+        padding: 50px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color:white;
+        padding: 20px;
+        /* bottom: 10px; */
+
+      }
+
+      .join-banner h2 {
+        font-size: 1.3rem;
+      }
+
+      .signup-btn {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .footer-center {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer {
+        padding: 40px 20px;
+        align-items: center;
+      }
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="nav">
+      <ul class="ul">
+        <div class="logo"></div>
+        <li><a href="demo1.html" style="text-decoration: none; color: black;">HOME</a></li>
+        <li>MEN</li>
+        <li><a href="women.html" style="text-decoration: none; color: black;">WOMEN</a></li>
+        <li><a href="kids.html" style="text-decoration: none; color: black;">KIDS</a></li>
+        <li><a href="cart.html" class="cart-btn" style="text-decoration: none; color: black;">🛒 CART</a></li>
+      </ul>
+    </div><br><br>
+
+
+    <!-- 1 -->
+    <div class="maincon">    
+        <div class="con1">
+            
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/08db0a17a14849928e0addeb2b00c97a_9366/jogit-shoes.jpg');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹7000.00
+                        <p style="font-weight: 200;">
+                            DURAMO SPEED 2 IK <br>
+                            <u style="cursor: pointer;" class="shop-btn" onclick="addToCart('DURAMO SPEED 2 IK',7000.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/08db0a17a14849928e0addeb2b00c97a_9366/jogit-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a20bd1b87054ccca5582754be95fcc3_9366/adizero-sl-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹13999.00
+                        <p style="font-weight: 200;">
+                           Adizero EVO SL Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Adizero EVO SL Shoes',13999.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a20bd1b87054ccca5582754be95fcc3_9366/adizero-sl-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/be6293fbb7df493d962c1a036d1c6e1a_9366/alphaboost-v2-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹10000
+                        <p style="font-weight: 200;">
+                           Supernova Rise 2 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Supernova Rise 2 Running Shoes',10000,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/be6293fbb7df493d962c1a036d1c6e1a_9366/alphaboost-v2-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/999b0987aaff43dc9280bde76ef9339c_9366/4dfwd-4-running-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.00
+                        <p style="font-weight: 200;">
+                           Ultrarun 5 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Ultrarun 5 Running Shoes ',6399.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/999b0987aaff43dc9280bde76ef9339c_9366/4dfwd-4-running-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/dd40cf013ae54c58bcac104158999f08_9366/supernova-stride-2-running-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹21876.00
+                        <p style="font-weight: 200;">
+                            Galaxy 7 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Galaxy 7 Running Shoes',21876.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/dd40cf013ae54c58bcac104158999f08_9366/supernova-stride-2-running-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+       
+        <!-- 2 -->
+         <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/5c14b46b8e5f44bdbab10df75a761c1e_9366/jauntza-shoes.jpg');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹5999.00
+                        <p style="font-weight: 200;">
+                           Galaxy 7 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Galaxy 7 Running Shoes',5999.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/5c14b46b8e5f44bdbab10df75a761c1e_9366/jauntza-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/0fd66b372b0e4a829ac349aa5955f4b9_9366/axelate-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6299.00
+                        <p style="font-weight: 200;">
+                          Response Super Shoes <br>
+                            <u style="cursor: pointer;" onclick="addToCart('  Response Super Shoes',6299.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/0fd66b372b0e4a829ac349aa5955f4b9_9366/axelate-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/38ec630ca77a4c08a4c4be62716a6d0c_9366/cushup-cloudfoam-walking-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹12976.00
+                        <p style="font-weight: 200;">
+                          Supernova Ease Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Supernova Ease Shoes',12976.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/38ec630ca77a4c08a4c4be62716a6d0c_9366/cushup-cloudfoam-walking-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/22496a96d940426e8436f95716a81861_9366/comfort-stride-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹9399.00
+                        <p style="font-weight: 200;">
+                          TorGlide <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('    TorGlide',9399.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/22496a96d940426e8436f95716a81861_9366/comfort-stride-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/fced8406ceeb4af5b161b233738e5822_9366/cloudfoam-comfy-shoes.jpg');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹8555.00
+                        <p style="font-weight: 200;">
+                           4DFWD 4 Running Shoes <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  4DFWD 4 Running Shoes',8555.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/fced8406ceeb4af5b161b233738e5822_9366/cloudfoam-comfy-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3  t-shirts-->
+         <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1d71ddd9-6d86-410a-8b3d-fc9ba9292aab/AS+LJ+M+NK+TF+SI+PO+HOODIE.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹1759.00
+                        <p style="font-weight: 200;">
+                          Men's Dri-FIT Running T-Shirt <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Mens Dri-FIT Running T-Shirt',1759.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1d71ddd9-6d86-410a-8b3d-fc9ba9292aab/AS+LJ+M+NK+TF+SI+PO+HOODIE.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/51c6166e-8fdb-4c31-a65c-8c5036447375/AS+KB+M+NK+DF+TEE+M90+LBR.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.0
+                        <p style="font-weight: 200;">
+                          Nike Dri-FIT <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Nike Dri-FIT',1399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/51c6166e-8fdb-4c31-a65c-8c5036447375/AS+KB+M+NK+DF+TEE+M90+LBR.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/624fe3f0-53d6-4764-a2c9-9c55c5092387/AS+M+NK+CLUB+BB+CREW.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1000
+                        <p style="font-weight: 200;">
+                        Jordan Flight Essentials <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Jordan Flight Essentials',1000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/624fe3f0-53d6-4764-a2c9-9c55c5092387/AS+M+NK+CLUB+BB+CREW.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/2da1bd52-ef58-48b2-810f-14b019cee86c/AS+M+NK+DF+UV+RN+ENRGY+MILER+S.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1639.0
+                        <p style="font-weight: 200;">
+                          Nike Pro <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Nike Pro',1639.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/2da1bd52-ef58-48b2-810f-14b019cee86c/AS+M+NK+DF+UV+RN+ENRGY+MILER+S.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/74ba8e1f-7449-4fdd-a5e0-4db180d55eb7/M+J+BRK+RLT+GFX+CREW+LB.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹2186.0
+                        <p style="font-weight: 200;">
+                          Nike Tech <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('    Nike Tech',2186.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/74ba8e1f-7449-4fdd-a5e0-4db180d55eb7/M+J+BRK+RLT+GFX+CREW+LB.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 hoodies -->
+         <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/19f7ce2b-0a7b-4aca-90d9-7fd604d7085b/M+J+BRK+CLLGTE+HBR+PO+HD+LB.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹4000.00
+                        <p style="font-weight: 200;">
+                           Jordan Brooklyn Fleece <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('   Jordan Brooklyn Fleece',4000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/19f7ce2b-0a7b-4aca-90d9-7fd604d7085b/M+J+BRK+CLLGTE+HBR+PO+HD+LB.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/cc8314ca-7031-4109-83e4-0241e4427662/AS+M+NK+CLUB+BB+GFX+CREW.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹3999.00
+                        <p style="font-weight: 200;">
+                         Nike Club Fleece<br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Nike Club Fleece',3999.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/cc8314ca-7031-4109-83e4-0241e4427662/AS+M+NK+CLUB+BB+GFX+CREW.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6c24804e-65d3-40db-bc89-b18eb62796a7/AS+KB+U+NK+TF+FUND+PO+HDY.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹5897
+                        <p style="font-weight: 200;">
+                         Jordan Flight<br>
+                            <u style="cursor: pointer;"  onclick="addToCart('   Jordan Flight',5897.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6c24804e-65d3-40db-bc89-b18eb62796a7/AS+KB+U+NK+TF+FUND+PO+HDY.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/85b5128d-e4c6-4239-a85e-730c0d86b424/M+J+MANILA+CITY+HBR+FLC+PO.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.00
+                        <p style="font-weight: 200;">
+                          Jordan Brooklyn Fleece <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Jordan Brooklyn Fleece',6399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/85b5128d-e4c6-4239-a85e-730c0d86b424/M+J+MANILA+CITY+HBR+FLC+PO.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/50149d0a-1fbc-4347-a12c-91b7a38e4f6a/M+J+FLT+MTNSIDE+PADDED+PO.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹8187.00
+                        <p style="font-weight: 200;">
+                           Nike Primary Fleece<br>
+                            <u style="cursor: pointer;"  onclick="addToCart('Nike Primary Fleece',8187.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/50149d0a-1fbc-4347-a12c-91b7a38e4f6a/M+J+FLT+MTNSIDE+PADDED+PO.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<video loop muted autoplay playsinline width="900" height="550" style="border-radius: 10px; object-fit: cover;" class="video">
+  <source src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/global_supernova_running_ss25_early_access_multiple_plps_banner_snippet_d_24dc8160b1.mp4" type="video/mp4">
+</video>
+ <div style="
+    position: absolute; 
+    top: 320%; 
+    left: 68%; 
+    color: rgb(5, 5, 5); 
+    font-family: Arial, sans-serif;
+  ">
+    <h1 style="font-size: 60px;">Supercomfort. Supernova.</h1><br>
+    <p>
+      Experience the Supercomfort of Supernova Rise 2<br>
+      — Dreamstrike+ cushions every step with expertly engineered<br>
+      super-foam, delivering ideal comfort and support.
+    </p>
+  </div>
+
+
+  <!-- 5 -->
+  <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/17998f4b-ad3a-4c16-9066-3bd3382905d0/SEL+MNK+DF+JSY+V5+CURRY.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹6999.00
+                        <p style="font-weight: 200;">
+                          Sacramento Kings Icon Edition <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('   Sacramento Kings Icon Edition ',6999.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/17998f4b-ad3a-4c16-9066-3bd3382905d0/SEL+MNK+DF+JSY+V5+CURRY.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/4d8cd5c8-12b2-42ac-9bdd-93549d1c5674/CBF+M+NK+DF+STAD+JSY+SS+HM.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹3999.00
+                        <p style="font-weight: 200;">
+                          Air Jordan <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('   Air Jordan',3999.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/4d8cd5c8-12b2-42ac-9bdd-93549d1c5674/CBF+M+NK+DF+STAD+JSY+SS+HM.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/61de299f-9dc7-4d9b-ac1e-fa586d6af8ee/KNVB+M+NK+REISSUE+SS+JSY+N%26N.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6000
+                        <p style="font-weight: 200;">
+                          Los Angeles Lakers Icon Edition<br>
+                            <u style="cursor: pointer;"  onclick="addToCart('    Los Angeles Lakers Icon Edition',6000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/61de299f-9dc7-4d9b-ac1e-fa586d6af8ee/KNVB+M+NK+REISSUE+SS+JSY+N%26N.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1efce91b-1592-408e-add5-555db5ac0c12/ATM+M+NK+DF+JSY+SS+STAD+HM.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.00
+                        <p style="font-weight: 200;">
+                          Atlético Madrid 2025/26 Stadium Home <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Atlético Madrid 2025/26 Stadium Home',6399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1efce91b-1592-408e-add5-555db5ac0c12/ATM+M+NK+DF+JSY+SS+STAD+HM.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/ae3a80f2-2c76-42ce-966b-c2e39e2c70b9/PSG+M+NK+DF+JSY+SS+STAD+HM.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹7858.00
+                        <p style="font-weight: 200;">
+                           Caitlin Clark Indiana Fever <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Caitlin Clark Indiana Fever',7858.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/ae3a80f2-2c76-42ce-966b-c2e39e2c70b9/PSG+M+NK+DF+JSY+SS+STAD+HM.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 bags-->
+        <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/c9cab5ae-6d77-49d9-ae99-7eac4f699449/NK+HAYWARD+BKPK.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹7000.00
+                        <p style="font-weight: 200;">
+                          Nike Utility 2.0 <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Nike Utility 2.0',7000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/c9cab5ae-6d77-49d9-ae99-7eac4f699449/NK+HAYWARD+BKPK.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/cc04bee4-66d9-4900-a71a-948849f6fbf5/NK+UTILITY+SPD+BKPK+-+2.0+GFX.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹7999.00
+                        <p style="font-weight: 200;">
+                          Nike Utility Power <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Nike Utility Power',7999.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/cc04bee4-66d9-4900-a71a-948849f6fbf5/NK+UTILITY+SPD+BKPK+-+2.0+GFX.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/8a3750a5-db12-4320-8fa2-014eea0fa175/NK+NSW+RPM+TOTE.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹10000
+                        <p style="font-weight: 200;">
+                          Nike Utility Speed <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Response Super Shoes',6299.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/0fd66b372b0e4a829ac349aa5955f4b9_9366/axelate-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/770d9331-01f1-488a-be7a-a0f89a752224/NK+BRSLA+M+BKPK+-+9.5+%2824L%29.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹6399.00
+                        <p style="font-weight: 200;">
+                          Nike Heritage <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Response Super Shoes',6299.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/0fd66b372b0e4a829ac349aa5955f4b9_9366/axelate-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/79b645dd-88e5-4034-a66f-ebf858d092e0/NK+HAYWARD+FUTURA+BKPK+-+SOLID.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹7187.00
+                        <p style="font-weight: 200;">
+                          Nike Hayward <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Response Super Shoes',6299.00,'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/0fd66b372b0e4a829ac349aa5955f4b9_9366/axelate-shoes.jpg')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 hats -->
+        <div class="con1">
+            <div class="box" id="b1"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6c9a61ae-68f7-43b2-8be0-652c2cc61dc4/U+NK+DF+PRO+CAP+S+FB+FUT+L.png');"></div>
+                <div class="name" id="n1"><br>
+                    <h3 style="margin-top: -15px; margin-left: 25px;">₹1299.00
+                        <p style="font-weight: 200;">
+                           Nike Dri-FIT ADV Rise <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Nike Dri-FIT ADV Rise',1299.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6c9a61ae-68f7-43b2-8be0-652c2cc61dc4/U+NK+DF+PRO+CAP+S+FB+FUT+L.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="box" id="b2"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/e0b09b29-adc8-461d-ab9c-63c2c9ac5455/U+NK+DF+RISE+CAP+AB+BIG+SWSH.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1399.00
+                        <p style="font-weight: 200;">
+                          Nike Dri-FIT Club <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Nike Dri-FIT Club',1399.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/e0b09b29-adc8-461d-ab9c-63c2c9ac5455/U+NK+DF+RISE+CAP+AB+BIG+SWSH.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b3"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/0159d6bc-6bb0-47d8-8a41-d05f9df45200/U+NK+DFADV+FLY+CAP+U+AB+AEROAD.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹1000
+                        <p style="font-weight: 200;">
+                          Jordan Jumpman Pro <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('  Jordan Jumpman Pro',1000.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/0159d6bc-6bb0-47d8-8a41-d05f9df45200/U+NK+DFADV+FLY+CAP+U+AB+AEROAD.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b4"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d2451620-e6d1-411a-bea7-d5de2a498342/U+J+RISE+CAP+S+CB+SPRT.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹2699.00
+                        <p style="font-weight: 200;">
+                          Nike Dri-FIT Club <br>
+                            <u style="cursor: pointer;"  onclick="addToCart('   Nike Dri-FIT Club',2699.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d2451620-e6d1-411a-bea7-d5de2a498342/U+J+RISE+CAP+S+CB+SPRT.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="box" id="b5"><div class="imgk" style="background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1bda2fc8-969b-40b7-badf-0cf86e1e5989/U+J+PRO+CAP+S+FB+JORDAN.png');"></div>
+                <div class="name" id="n1">
+                    <h3 style="margin-top: 2px; margin-left: 25px;">₹2186.00
+                        <p style="font-weight: 200;">
+                          Jordan Terra <br>
+                            <u style="cursor: pointer;"  onclick="addToCart(' Jordan Terra',2186.00,'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1bda2fc8-969b-40b7-badf-0cf86e1e5989/U+J+PRO+CAP+S+FB+JORDAN.png')">shop now</u>
+                        </p>
+                        
+                    </h3>
+                </div>
+            </div>
+        </div><br><br><br>
+        <h1 style="margin-left: 90px;">CRICKET SHOES FOR MEN</h1><br>
+        <p style="margin-left: 90px; font-size: 20px;">You will find everything you need in the adidas shoe collection for men. Regardless of whether it's summer or winter, sport or casual,<br> with men's shoes by adidas you are always one step ahead of the latest trend. adidas cricket shoes provide protection for your feet and <br> offer sheer comfort so you can enjoy every moment. The cricket shoes for men from adidas are designed to complement your active lifestyle.</p>
+        <br><h2 style="margin-left: 90px; font-weight: 100;">The brand with the three stripes – adidas cricket shoes for men</h2>
+        <br>
+        <h3 style="margin-left: 90px; font-weight: 100;">We provide your supplies for training or competition, so you are fully motivated to perform at your very best when cricket: cricket shoes from adidas.</h3>
+        <br><h3 style="margin-left: 90px; font-weight: 100;">Our cricket shoes are made of textile upper.</h3>
+        <br><h3 style="margin-left: 90px; font-weight: 100;">Blue and white are available colors for our cricket shoes.</h3>
+        <br><h3 style="margin-left: 90px; font-weight: 100;">Do you want to break and redefine the rules? Fun and self-improvement are both possible with our products for men. Athletes know the crucial role <br> played by decision-making in victory or defeat. Let our products for men inspire you and get the optimum support for your next goals.</h3>
+        <br><h3 style="margin-left: 90px; font-weight: 100;">Show your personal style that is totally you with cricket shoes for men from adidas.</h3>
+
+
+<br><br><br>
+    <!--Join Banner-->
+    <section class="join-banner">
+        <h2>JOIN ADIDAS AND GET 10% OFF</h2>
+        <Button class="signup-btn">SIGN UP FOR FREE -></Button>
+    </section>
+
+    <!--Footer Section-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>PRODUCTS</h3>
+                <ul>
+                    <li>Footwear</li>
+                    <li>Clothing</li>
+                    <li>Accessories</li>
+                    <li>Outlet-Sale</li>
+                    <li>New Arrivals</li>
+                    <li>Flat 50% Off!</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sports</h3>
+                <ul>
+                    <li>Cricket</li>
+                    <li>Running</li>
+                    <li>Football</li>
+                    <li>Gym/Training</li>
+                    <li>Tennis</li>
+                    <li>Hiking & Outdoor</li>
+                    <li>Basketball</li>
+                    <li>Swimming</li>
+                    <li>Skateboarding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COLLECTIONS</h3>
+                <ul>
+                    <li>Ultraboost</li>
+                    <li>Superstar</li>
+                    <li>NMD</li>
+                    <li>Stan Smith</li>
+                    <li>Sustainability</li>
+                    <li>Predator</li>
+                    <li>Parley</li>
+                    <li>Adicolor</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li>Help</li>
+                    <li>UNiDays</li>
+                    <li>Customer Services</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Shipping</li>
+                    <li>Order Tracker</li>
+                    <li>Store Finder</li>
+                    <li>adiClub</li>
+                    <li>Terms & Conditions</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>COMPANY INFO</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Omega stories</li>
+                    <li>Omega Apps</li>
+                    <li>Entity Details</li>
+                    <li>Press</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOWS US</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                                width="24"></a></li>
+                    <li><a href="#"><img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-logo-icon-svg-download-png-83440.png?f=webp&w=512" alt="Facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p>©2024 Omega India Marketing Pvt. Ltd</p>
+            <ul class="footer-links">
+                <li>Cookie Settings</li>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+    </footer>
+    </div>    
+  <script src="men.js"></script>
+</body>
+</html>

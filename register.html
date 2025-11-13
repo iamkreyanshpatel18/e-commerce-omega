@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <head>
+  ...
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #000;
+      padding: 1rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-container {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .signup-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .gender label {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #333;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 16px;
+    }
+
+    .login-link a {
+      color: #000;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+      }
+
+      .signup-container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.UNRfOtGFBhUPTfmAqtHhdAAAAA?cb=ucfimg2ucfimg=1&w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3" width="60px" height="100px" alt="Adidas Logo" class="logo" />
+     
+
+      <ul class="nav-links">
+        <li><a href="#">Log in</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Store Finder</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    </header>
+
+    <main class="signup-container">
+
+    <form id="registerForms">
+    <h2>Create Your Account</h2>
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="First Name" >
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name"  >
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email"  >
+      </div>
+      <div class="form-group gender">
+        <label>Gender</label>
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <label><input type="radio" name="gender" value="other" /> Other</label>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password"  >
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"  >
+      </div>
+      <button type="submit" class="submit-btn">Sign Up</button>
+      <p class="login-link">
+         Already have an account? <a href="./Login.html">Log in here</a>
+      </p>
+
+
+    </form>
+    </main>
+    <script>
+document.getElementById("registerForms").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop page refresh
+
+  const firstName = document.getElementById("firstname").value.trim();
+  const lastName = document.getElementById("lastname").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const confirmPassword = document.getElementById("confirm-password").value.trim();
+
+  // ✅ simple validation
+  if (!firstName || !lastName || !email || !password || !confirmPassword) {
+    alert("Please fill in all fields!");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  // ✅ store user data in localStorage
+  const user = {
+    firstName,
+    lastName,
+    email,
+    password
+  };
+
+  localStorage.setItem("userData", JSON.stringify(user));
+  alert("Registration successful! Redirecting to login page...");
+
+  // ✅ redirect to login
+  window.location.href = "Login.html";
+});
+</script>
+
+</body>
+</html>

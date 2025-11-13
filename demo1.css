@@ -1,0 +1,199 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .main {
+      width: 100%;
+      height: 1000px;
+    }
+
+    .img {
+      width: 100%;
+      height: 500px;
+      background-image: url(./asset/img1.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+
+    .ul {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+    }
+
+    .logo {
+      height: 70px;
+      width: 90px;
+      background-image: url(https://th.bing.com/th/id/OIP.nJ88G7d4MLVHFOWpCRd-bAHaFj?w=207&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .mainimg {
+      width: 100%;
+      height: 500px;
+      margin-top: -300px;
+    }
+
+    .box1 {
+      width: 90%;
+      height: 450px;
+      margin-left: 80px;
+      margin-top: -250px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .box {
+      height: 400px;
+      width: 300px;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      box-shadow: 7px 7px 14px #555555, -7px -7px 14px #ffffff;
+      cursor: pointer;
+    }
+
+    #b1 {
+      background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/Deal_Card_1050x1400_3_copy_e2f379c5bb.jpg);
+    }
+    #b2 {
+      background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/Deal_Card_1050x1400_4_copy_fddfd7ee36.jpg);
+    }
+    #b3 {
+      background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/Deal_Card_1050x1400_2_copy_a36f39cb86.jpg);
+    }
+    #b4 {
+      background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_800,w_800/Deal_Card_1050x1400_1_copy_5ab3ba433b.jpg);
+    }
+
+    h1 {
+      margin-left: 120px;
+      margin-top: 40px;
+    }
+
+    /* ---- Image Slider ---- */
+    .scrollbox {
+      position: relative;
+      width: 85%;
+      overflow: hidden;
+      margin-left: 120px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+
+    .images {
+      display: flex;
+      transition: transform 0.6s ease;
+      width: max-content;
+      height: 430px;
+    }
+
+    .images img {
+      width: 25vw;
+      max-width: 250px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      margin-right: 15px;
+      object-fit: cover;
+      height: 400px;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      color: black;
+      transition: all 0.3s;
+      z-index: 10;
+    }
+
+    .arrow-btn.left {
+      left: 15px;
+    }
+
+    .arrow-btn.right {
+      right: 15px;
+    }
+
+    .arrow-btn:hover {
+      background: black;
+      color: white;
+    }
+    .product1{
+        border: 2px solid rebeccapurple;
+        width: 200px;
+        height: 200px;
+        margin-top: 90px;
+    }
+    .omega-btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.omega-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.omega-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+.shop{
+  background-color: rgb(0, 255, 26);
+  margin-top: 400px;
+  margin-left: -200px;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+}
+.shop:hover{
+  background-color: rgb(232, 127, 255);
+}
+.link{
+  width: 100px;
+  height: 100px;
+  margin-top: 400px;
+  margin-left: -100px;
+  margin-bottom: 200px;
+  font-size: 15px;
+  color: #E26635;
+}
